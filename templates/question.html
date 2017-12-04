@@ -1,0 +1,30 @@
+
+       <div class="question row">
+
+         <div class="col-md-2">
+
+            <a href=#><img class="q-avatar" src="/static/img/mickey.jpg"></a>
+             <a href="#" class="like"></a><a href="#" class="likes">5</a>
+             <a href="#" class="dislike"></a><a href="#" class="likes">5</a>
+
+         </div>
+
+         <div class="col-md-10">
+
+           <div class="q-title">  <a href="{% url "question_url" id %}">{{ title }}</a></div>
+           <div class="q-text">{{ text }}
+               <a class="learn-more" href=#>Читать далее...</a>
+               <br>
+               <div class="tags">
+               <a href="#">answer(3)</a>
+               Tags: <a href="#">bender</a> <a href="#">disney</a>
+               </div>
+           </div>
+
+
+
+
+         </div>
+
+
+</div>

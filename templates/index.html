@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+    {% block content %}
+<div class="container wrap">
+
+    <div class="row">
+
+      <div class="col-md-9 col-sm-6 ">
+      {% block question %}
+            {% for q in questions %}
+                {% include "question.html" with title=q.title text=q.text id=q.id %}
+            {% endfor %}
+          {% endblock %}
+      </div>
+        <div class="col-md-3 col-sm-6 right-col">
+
+
+        </div>
+
+    </div>
+
+
+
+</div>
+<!-- /.container -->
+<img class="cat" src="../static/img/cat.png">
+    {%  endblock %}
