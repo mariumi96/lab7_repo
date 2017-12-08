@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ask',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,16 @@ WSGI_APPLICATION = 'lr5.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'ask_db',
+        'USER':'dbuser',
+        'PASSWORD':'123',
+        'HOST':'localhost',
+        'PORT':3306,
+        'OPTIONS':
+            {'charset':'utf8'},
+
+        'TEST_CHARSET':'utf8',
     }
 }
 
@@ -123,6 +132,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    '/home/mariumi/projects/lr5/static',
+    '/home/mariumi/Projects/lr5/static',
 )
 MEDIA_URL = ''

@@ -6,8 +6,8 @@
 
       <div class="col-md-9 col-sm-6 ">
       {% block question %}
-            {% for q in questions %}
-                {% include "question.html" with title=q.title text=q.text id=q.id %}
+            {% for question in questions %}
+                {% include "question.html" %}
             {% endfor %}
           {% endblock %}
       </div>

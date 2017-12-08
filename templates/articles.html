@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for question in questions %}
+        <div class="article-body">
+                <h2><a href="/questions/{{question.id}}" target="_blank">{{question.title}}</a></h2>
+                <p>{{question.snippet}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
