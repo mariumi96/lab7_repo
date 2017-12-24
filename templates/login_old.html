@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+<h2 class="login-pos">Вход</h2>
+    <form method="POST">
+         {% csrf_token %}
+        <div class="content">
+            <table align="center">
+                <tr>
+                <td>
+                    <label>
+                        Имя пользователя (или эл. почта):
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="username_or_email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Пароль:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="password">
+                </td>
+            </tr>
+            </table>
+            <button action="submit" class="btn btn-primary login-pos btn-login-w">Войти</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

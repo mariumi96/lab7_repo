@@ -12,11 +12,32 @@
 </head>
 <body class="bg-color">
     <nav class="navbar navbar-expand-md navbar-dark navbar-color fixed-top">
-      <a class="navbar-brand" href="/questions"><img class="logo" src="/static/img/logo.png"></a>
+      <a class="navbar-brand" href="{% url "index" %}"><img class="logo" src="/static/img/logo.png"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+ {% if request.user.is_authenticated %}
+        {% block user %}
 
+            <div class="nav-account dropdown">
+                <a href="#" class="hello2">
+                    Hello, {{ user.username }}
+                </a>
+
+                    <a href="{% url 'logout' %}?continue={{ request.path }}" class="hello3">Log out</a>
+
+            </div>
+
+        {% endblock %}
+    {% else %}
+        <a href="{% url 'login' %}?continue={{ request.path }}" class="hello2">
+            Log in
+        </a>
+
+        <a href="{% url 'singup' %}?continue=/" class="hello3">
+            Register
+        </a>
+    {% endif %}
     </nav>
 <!-- /.container -->
     {% block content %}

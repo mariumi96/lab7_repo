@@ -182,8 +182,7 @@ border:2px solid #ff8b8c;
 
 }
 .footer{
-  
-    
+    margin-top: 500px;
     background-color: #ff8d8c;
     color:whitesmoke;
     text-align: center;
@@ -290,4 +289,42 @@ margin-bottom: -53px;
 .wrap
 {
 min-height:100%;
+}
+.singup
+{
+    margin-left: 500px;
+    margin-bottom: 15px;
+}
+.btn-singup-pos
+{
+    margin-left: 500px;
+    margin-top: 5px;
+    width:400px;
+}
+.login-pos
+{
+    margin-left:470px;
+}
+.btn-login-w
+{
+    margin-top: 5px;
+    width:460px;
+}
+a.hello2
+{
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin-left:800px;
+
+
+}
+a.hello3
+{
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin-left:40px;
+}
+.btn-top
+{
+    margin-top: 10px;
 }

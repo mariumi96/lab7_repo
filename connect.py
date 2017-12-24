@@ -6,5 +6,6 @@ cursor=db.cursor()
 cursor.execute("select * from ask_question")
 result = cursor.fetchall()
 
+# Вывод записей из БД
 for x in result:
     print(x)
